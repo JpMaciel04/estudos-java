@@ -1,14 +1,8 @@
 
 # Java Studies ☕
 
-Este repositório contém atividades práticos em Java,
-organizados por tópicos, desde fundamentos até POO e estruturas de dados.
+Repositório com exercícios e exemplos práticos para estudo da linguagem Java.
 
-## 📚 Conteúdos
-- Fundamentos da linguagem
-- Programação Orientada a Objetos
-- Estruturas de Dados
-- Desafios práticos
-
-## 🎯 Objetivo
-Consolidar o aprendizado e servir como referência para projetos futuros.
+Os conteúdos estão organizados por assunto,
+indo dos fundamentos até conceitos de Programação Orientada a Objetos
+e estruturas de dados.
