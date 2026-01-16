@@ -1,5 +1,3 @@
-
-
 public class estoque {
 
     private int id;
