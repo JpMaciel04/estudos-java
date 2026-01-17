@@ -51,10 +51,12 @@ public class OrdemServicoService {
     if (statusOS != null){
         os.setStatusOS(statusOS);
     }
+    if(cliente != null)
+        os.setCliente(cliente);
 
     return true;
 }
-    }
-
-
 }
+
+
+
