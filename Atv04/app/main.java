@@ -5,6 +5,7 @@ import Atv04.controller.ClienteController;
 import Atv04.controller.OrdemServicoController;
 import Atv04.controller.TecnicoController;
 import Atv04.model.EnumEquipamento;
+import Atv04.model.EnumStatusOS;
 import Atv04.service.ClienteService;
 import Atv04.service.OrdemServicoService;
 import Atv04.service.TecnicoService;
@@ -126,7 +127,6 @@ public class main {
                     System.out.print("Descrição do problema: ");
                     String descricao = scanner.nextLine();
 
-                    ordemController.cadastrarOrdemServico(descricao, tecnicoId, equip, clienteId);
                     break;
 
                 case 7:
@@ -135,14 +135,13 @@ public class main {
                     scanner.nextLine();
 
                     System.out.print("Novo status (ABERTA, EM_ANDAMENTO, FINALIZADA, CANCELADA): ");
-                    StatusOS status =
-                            StatusOS.valueOf(scanner.nextLine().toUpperCase());
+                    EnumStatusOS status =   EnumStatusOS.valueOf(scanner.nextLine().toUpperCase());
 
-                    ordemController.atualizarStatus(numeroOS, status);
+                    ordemController.atualizarOrdemServico(numeroOS, "", null, status, null);
                     break;
 
                 case 8:
-                    ordemController.listarOS();
+                    ordemService.listaOrdemServico();;
                     break;
 
                 case 0:

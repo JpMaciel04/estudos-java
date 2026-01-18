@@ -6,6 +6,9 @@ import Atv04.service.ClienteService;
 public class ClienteController {
 
     private ClienteService clienteService;
+    public ClienteController (ClienteService clienteService){
+        this.clienteService = clienteService;
+    }
 
     public void CadastrarCliente (String nome, String telefone){
         if (nome == null || nome.isBlank()) {
