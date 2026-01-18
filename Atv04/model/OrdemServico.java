@@ -11,6 +11,7 @@ public class OrdemServico {
     EnumStatusOS statusOS;
     Cliente cliente;
 
+
     public OrdemServico (String desc, Tecnico tecnico,EnumStatusOS statusOS, Cliente cliente){
         this.id = ++cont;
         this.desc = desc;
@@ -67,14 +68,12 @@ public class OrdemServico {
         this.cliente = cliente;
     }
 
-
     @Override
     public String toString() {
-        return "OrdemServico [desc=" + desc + ", tecnico=" + tecnico + ", equipamento=" + equipamento + ", statusOS="
-                + statusOS + ", cliente=" + cliente + "]";
+        return "OrdemServico [id=" + id + ", desc=" + desc + ", tecnico=" + tecnico + ", equipamento=" + equipamento
+                + ", statusOS=" + statusOS + ", cliente=" + cliente + "]";
     }
-    
 
-    
+   
 
 }

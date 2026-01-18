@@ -32,7 +32,7 @@ public class OrdemServicoService {
         return null;
     }
 
-    public boolean patchCliente(int id, String desc, Tecnico tecnico,EnumStatusOS statusOS, Cliente cliente) {
+    public boolean patchOrdemServico(int id, String desc, Tecnico tecnico,EnumStatusOS statusOS, Cliente cliente) {
 
     OrdemServico os = buscarOrdemServico(id);
     if (os == null) {

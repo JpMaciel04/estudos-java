@@ -31,16 +31,25 @@ public class TecnicoService {
         return null;
     }
 
-    public boolean patchTecnico(int id, String nome, EnumEquipamento especiaidade){
+    public boolean patchTecnico(int id, String nome, EnumEquipamento especialidade){
         Tecnico tecnico = buscaTecnico(id);
-        if (!nome.isBlank() || nome != null) {
+        if (tecnico == null){
+            return false;
+        }
+
+        boolean attComSucesso = false;
+
+        if (nome != null && !nome.isBlank()) {
             tecnico.setNome(nome);
+            attComSucesso = true;
         }
-        if (especiaidade != null) {
-            tecnico.setEspecialidade(especiaidade);
-            return true;
+
+        if (especialidade != null) {
+            tecnico.setEspecialidade(especialidade);
+            attComSucesso = true;
         }
-        return false;
+
+        return attComSucesso;
     }
 
 }
